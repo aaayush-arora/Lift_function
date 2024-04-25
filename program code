@@ -13,8 +13,6 @@ bool overloaded;
 public:
 Lift() : currentFloor(0), direction(STOP), doorOpen(false), emergencyStop(false), overloaded(false) {}
 
-2) Aayush Arora:
-
 void goToFloor(int floor) {
 if (emergencyStop) {
 std::cout << "Emergency stop activated. Lift is halted." << std::endl;
