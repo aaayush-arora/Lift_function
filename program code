@@ -49,3 +49,10 @@ void deactivateEmergencyStop() {
 emergencyStop = false;
 std::cout << "Emergency stop deactivated." << std::endl;
 }
+
+void reportOverload() {
+overloaded = true;
+std::cout << "Overload detected. Lift is halted until excess weight is removed." << std::endl;
+}
+
+
