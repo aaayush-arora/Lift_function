@@ -45,3 +45,7 @@ std::cout << "Door closed" << std::endl;
 
 notifyFloorArrival(floor);
 }
+void deactivateEmergencyStop() {
+emergencyStop = false;
+std::cout << "Emergency stop deactivated." << std::endl;
+}
