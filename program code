@@ -54,5 +54,14 @@ void reportOverload() {
 overloaded = true;
 std::cout << "Overload detected. Lift is halted until excess weight is removed." << std::endl;
 }
+void removeOverload() {
+overloaded = false;
+std::cout << "Excess weight removed. Lift is now operational." << std::endl;
+}
+
+void communicateWithEmergencyServices() {
+std::cout << "Communicating with emergency services..." << std::endl;
+std::cout << "Emergency services notified." << std::endl;
+}
 
 
