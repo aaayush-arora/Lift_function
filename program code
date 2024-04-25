@@ -1,1 +1,14 @@
+#include <iostream>
 
+enum Direction { UP, DOWN, STOP };
+
+class Lift {
+private:
+int currentFloor;
+Direction direction;
+bool doorOpen;
+bool emergencyStop;
+bool overloaded;
+
+public:
+Lift() : currentFloor(0), direction(STOP), doorOpen(false), emergencyStop(false), overloaded(false) {}
