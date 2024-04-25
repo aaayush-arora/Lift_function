@@ -12,3 +12,38 @@ bool overloaded;
 
 public:
 Lift() : currentFloor(0), direction(STOP), doorOpen(false), emergencyStop(false), overloaded(false) {}
+
+2) Aayush Arora:
+
+void goToFloor(int floor) {
+if (emergencyStop) {
+std::cout << "Emergency stop activated. Lift is halted." << std::endl;
+return;
+}
+
+if (overloaded) {
+std::cout << "Lift is overloaded. Cannot move until excess weight is removed." << std::endl;
+return;
+}
+
+if (floor == currentFloor) {
+std::cout << "Already on floor " << floor << std::endl;
+return;
+}
+
+direction = floor < currentFloor ? DOWN : UP;
+
+while (currentFloor != floor) {
+std::cout << (direction == UP ? "Moving UP. " : "Moving DOWN. ") << "Now on floor " <<
+currentFloor << std::endl;
+direction == UP ? currentFloor++ : currentFloor--;
+}
+
+
+std::cout << "Door opened" << std::endl;
+std::cout << "Door will close shortly..." << std::endl;
+
+std::cout << "Door closed" << std::endl;
+
+notifyFloorArrival(floor);
+}
