@@ -63,5 +63,23 @@ void communicateWithEmergencyServices() {
 std::cout << "Communicating with emergency services..." << std::endl;
 std::cout << "Emergency services notified." << std::endl;
 }
+void notifyFloorArrival(int floor) {
+std::cout << "Arrived at floor " << floor << std::endl;
+}
+};
 
+int main() {
+Lift lift;
+
+lift.goToFloor(5);
+lift.activateEmergencyStop();
+lift.goToFloor(3);
+lift.deactivateEmergencyStop();
+lift.reportOverload();
+lift.goToFloor(3);
+lift.removeOverload();
+lift.communicateWithEmergencyServices();
+
+return 0;
+}
 
